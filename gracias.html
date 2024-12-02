@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gracias</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    h1 {
+      color: #4CAF50;
+    }
+  </style>
 </head>
 <body>
   <h1>¡Gracias por tu respuesta!</h1>
@@ -13,7 +23,10 @@
     // Capturar el parámetro 'nombre' de la URL
     const urlParams = new URLSearchParams(window.location.search);
     const nombre = urlParams.get('nombre');
-    document.getElementById('mensaje').innerText = `Gracias, ${nombre}, por completar el formulario.`;
+    document.getElementById('mensaje').innerText = 
+      nombre ? `Gracias, ${nombre}, por completar el formulario.` 
+             : "No se proporcionó un nombre.";
   </script>
 </body>
 </html>
+
