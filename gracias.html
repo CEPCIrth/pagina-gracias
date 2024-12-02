@@ -22,9 +22,11 @@
   <script>
     // Capturar el parámetro 'nombre' de la URL
     const urlParams = new URLSearchParams(window.location.search);
-    const Nombre = urlParams.get('Nombre');
+    const nombre = urlParams.get('nombre');
+
+    // Mostrar un mensaje personalizado si el nombre está presente
     document.getElementById('mensaje').innerText = 
-      nombre ? `Gracias, ${Nombre}, por completar el formulario.` 
+      nombre ? `Gracias, ${nombre}, por completar el formulario.` 
              : "No se proporcionó un nombre.";
   </script>
 </body>
