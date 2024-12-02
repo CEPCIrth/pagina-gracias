@@ -20,11 +20,9 @@
   <p id="mensaje"></p>
 
   <script>
-    // Captura el parámetro 'nombre' de la URL
+    // Capturar el parámetro 'nombre' de la URL
     const urlParams = new URLSearchParams(window.location.search);
     const nombre = urlParams.get('nombre');
-
-    // Muestra el mensaje personalizado si el nombre está presente
     document.getElementById('mensaje').innerText = 
       nombre ? `Gracias, ${nombre}, por completar el formulario.` 
              : "No se proporcionó un nombre.";
